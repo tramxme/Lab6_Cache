@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/*	hache emulation - statistics generation */
+/*	Cache emulation - statistics generation */
 /*	Generated for CSC 315 Lab 5 */
 
 #define CACHE_16 16
@@ -27,8 +27,8 @@ void InitiateCache(int size, int assoc) {
 
    cache.hit = 0;
    cache.count = 0;
-   cache.size = size;
-   cache.assoc = assoc;
+   cache.size = size;  //height
+   cache.assoc = assoc; //ways
    cache.numArr = calloc(sizeof(int **), size);
    cache.flagArr = calloc(sizeof(int *), size);
 
@@ -47,14 +47,23 @@ void InitiateCache(int size, int assoc) {
 
 /* Clean cache and free everything */
 void CleanCache(Cache *cache) {
+	int ndx;
+	for (ndx = 0; ndx < cache.size, ndx++) {
+		free(cache.numArr[ndx]);
+		free(cache.flagArr[ndx]);
+	}
+	free(cache.numArr);
+	free(cache.flagArr);
 }
 
 /* If found item, need to move it to the end of cache */
-void MoveCache(int index, int *mp) {
-   int idx;
-   for (idx = 0; idx < cache.assoc; idx++) {
-
+void MoveCache(int row, int column) {
+   int idx, *temp = cache.numArr[row][column];
+   
+   for (idx = column; idx + 1 < cache.assoc && cache.numArr[row][idx + 1]; idx++) {
+      cache.numArr[row][idx] = cache.numArr[row][idx + 1];
    }
+   cache.numArr[row][idx] = temp;
 }
 
 /* This function is to check if a an item was found in the cache */
