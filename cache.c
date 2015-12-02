@@ -97,6 +97,8 @@ int main()
       scanf("%d", &assoc);
    }
 
+   InitiateCache(size, assoc);
+
    printf("Size of pointer is: %lu\n\n", sizeof(mp1));
    printf("Enter rows and column for first matrix: ");
    scanf("%d%d", &r1, &c1);
