@@ -26,6 +26,7 @@ void InitiateCache(int size, int assoc) {
    int idx, row, col;
 
    cache.hit = 0;
+   cache.count = 0;
    cache.size = size;
    cache.assoc = assoc;
    cache.numArr = calloc(sizeof(int *), size);
