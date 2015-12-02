@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/*	Cache emulation - statistics generation */
+/*	hache emulation - statistics generation */
 /*	Generated for CSC 315 Lab 5 */
 
 #define CACHE_16 16
@@ -10,7 +10,7 @@
 typedef struct {
    int size; //Cache size can be either 16 or 256
    int assoc; //Cache associativity can be either 1,2 or 4
-   int **numArr; //Array to keep track of addresses
+   int ***numArr; //Array to keep track of addresses
    int **flagArr; //Array to keep track of which cache index is set
    int hit;
    int count;
@@ -29,10 +29,11 @@ void InitiateCache(int size, int assoc) {
    cache.count = 0;
    cache.size = size;
    cache.assoc = assoc;
-   cache.numArr = calloc(sizeof(int *), size);
+   cache.numArr = calloc(sizeof(int **), size);
    cache.flagArr = calloc(sizeof(int *), size);
+
    for (idx = 0; idx < size; idx++) {
-      cache.numArr[idx] = calloc(sizeof(int), assoc);
+      cache.numArr[idx] = calloc(sizeof(int *), assoc);
       cache.flagArr[idx] = calloc(sizeof(int), assoc);
    }
 
@@ -44,27 +45,42 @@ void InitiateCache(int size, int assoc) {
    }
 }
 
+/* Clean cache and free everything */
 void CleanCache(Cache *cache) {
 }
 
+/* If found item, need to move it to the end of cache */
+void MoveCache(int index, int *mp) {
+   int idx;
+   for (idx = 0; idx < cache.assoc; idx++) {
+
+   }
+}
+
 /* This function is to check if a an item was found in the cache */
-int checkHit(int *mp) {
-   int hit;
+int CheckHit(int *mp, int idx) {
+   int hit = 0, i;
+
+   for (i = 0; i < cache.assoc; i++) {
+      if (mp == cache.flagArr[idx]) {
+         hit = 1;
+         if (cache.size > 1 && cache.flagArr[idx][i + 1]) {
+            MoveCache(idx, mp);
+         }
+         break;
+      }
+   }
 
    return hit;
 }
 
-/*
-int index;
-index = mp % cache.size
-*/
-
 /* This function is to read from cache */
 void mem_read(int *mp)
 {
+   int index = ((int) mp % cache.size);
    readAccess++;
    cache.count++;
-   if (checkHit(mp)) {
+   if (CheckHit(mp, index)) {
       cache.hit++;
    }
    printf("Memory read from location %p\n", mp);
