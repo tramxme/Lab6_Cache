@@ -1,0 +1,180 @@
+Please enter cache size (16 or 256): Size entered: 16
+Please enter cache associativity (1, 2 or 4): Enter rows and column for first matrix: Enter rows and column for second matrix: 
+Output Matrix:
+11  12  
+32  35  
+For a cache size 16, matrix size is 2x2, associativity 1.
+Ratio of read to write accesses is 3.000000.
+Hit 6 - count 32
+"Hit rate" for the cache is 18.750%
+--------------------------------------------
+
+Please enter cache size (16 or 256): Size entered: 16
+Please enter cache associativity (1, 2 or 4): Enter rows and column for first matrix: Enter rows and column for second matrix: 
+Output Matrix:
+11  12  
+32  35  
+For a cache size 16, matrix size is 2x2, associativity 2.
+Ratio of read to write accesses is 3.000000.
+Hit 11 - count 32
+"Hit rate" for the cache is 34.375%
+--------------------------------------------
+
+Please enter cache size (16 or 256): Size entered: 16
+Please enter cache associativity (1, 2 or 4): Enter rows and column for first matrix: Enter rows and column for second matrix: 
+Output Matrix:
+11  12  
+32  35  
+For a cache size 16, matrix size is 2x2, associativity 4.
+Ratio of read to write accesses is 3.000000.
+Hit 20 - count 32
+"Hit rate" for the cache is 62.500%
+--------------------------------------------
+
+Please enter cache size (16 or 256): Size entered: 16
+Please enter cache associativity (1, 2 or 4): Enter rows and column for first matrix: Enter rows and column for second matrix: 
+Output Matrix:
+735  780  825  870  915  960  1005  1050  1095  1140  
+880  935  990  1045  1100  1155  1210  1265  1320  1375  
+1025  1090  1155  1220  1285  1350  1415  1480  1545  1610  
+1170  1245  1320  1395  1470  1545  1620  1695  1770  1845  
+1315  1400  1485  1570  1655  1740  1825  1910  1995  2080  
+1460  1555  1650  1745  1840  1935  2030  2125  2220  2315  
+1605  1710  1815  1920  2025  2130  2235  2340  2445  2550  
+1750  1865  1980  2095  2210  2325  2440  2555  2670  2785  
+1895  2020  2145  2270  2395  2520  2645  2770  2895  3020  
+2040  2175  2310  2445  2580  2715  2850  2985  3120  3255  
+For a cache size 16, matrix size is 10x10, associativity 1.
+Ratio of read to write accesses is 3.000000.
+Hit 1270 - count 4000
+"Hit rate" for the cache is 31.750%
+--------------------------------------------
+
+Please enter cache size (16 or 256): Size entered: 16
+Please enter cache associativity (1, 2 or 4): Enter rows and column for first matrix: Enter rows and column for second matrix: 
+Output Matrix:
+735  780  825  870  915  960  1005  1050  1095  1140  
+880  935  990  1045  1100  1155  1210  1265  1320  1375  
+1025  1090  1155  1220  1285  1350  1415  1480  1545  1610  
+1170  1245  1320  1395  1470  1545  1620  1695  1770  1845  
+1315  1400  1485  1570  1655  1740  1825  1910  1995  2080  
+1460  1555  1650  1745  1840  1935  2030  2125  2220  2315  
+1605  1710  1815  1920  2025  2130  2235  2340  2445  2550  
+1750  1865  1980  2095  2210  2325  2440  2555  2670  2785  
+1895  2020  2145  2270  2395  2520  2645  2770  2895  3020  
+2040  2175  2310  2445  2580  2715  2850  2985  3120  3255  
+For a cache size 16, matrix size is 10x10, associativity 2.
+Ratio of read to write accesses is 3.000000.
+Hit 1770 - count 4000
+"Hit rate" for the cache is 44.250%
+--------------------------------------------
+
+Please enter cache size (16 or 256): Size entered: 16
+Please enter cache associativity (1, 2 or 4): Enter rows and column for first matrix: Enter rows and column for second matrix: 
+Output Matrix:
+735  780  825  870  915  960  1005  1050  1095  1140  
+880  935  990  1045  1100  1155  1210  1265  1320  1375  
+1025  1090  1155  1220  1285  1350  1415  1480  1545  1610  
+1170  1245  1320  1395  1470  1545  1620  1695  1770  1845  
+1315  1400  1485  1570  1655  1740  1825  1910  1995  2080  
+1460  1555  1650  1745  1840  1935  2030  2125  2220  2315  
+1605  1710  1815  1920  2025  2130  2235  2340  2445  2550  
+1750  1865  1980  2095  2210  2325  2440  2555  2670  2785  
+1895  2020  2145  2270  2395  2520  2645  2770  2895  3020  
+2040  2175  2310  2445  2580  2715  2850  2985  3120  3255  
+For a cache size 16, matrix size is 10x10, associativity 4.
+Ratio of read to write accesses is 3.000000.
+Hit 2165 - count 4000
+"Hit rate" for the cache is 54.125%
+--------------------------------------------
+
+Please enter cache size (16 or 256): Size entered: 256
+Please enter cache associativity (1, 2 or 4): Enter rows and column for first matrix: Enter rows and column for second matrix: 
+Output Matrix:
+11  12  
+32  35  
+For a cache size 256, matrix size is 2x2, associativity 1.
+Ratio of read to write accesses is 3.000000.
+Hit 20 - count 32
+"Hit rate" for the cache is 62.500%
+--------------------------------------------
+
+Please enter cache size (16 or 256): Size entered: 256
+Please enter cache associativity (1, 2 or 4): Enter rows and column for first matrix: Enter rows and column for second matrix: 
+Output Matrix:
+11  12  
+32  35  
+For a cache size 256, matrix size is 2x2, associativity 2.
+Ratio of read to write accesses is 3.000000.
+Hit 20 - count 32
+"Hit rate" for the cache is 62.500%
+--------------------------------------------
+
+Please enter cache size (16 or 256): Size entered: 256
+Please enter cache associativity (1, 2 or 4): Enter rows and column for first matrix: Enter rows and column for second matrix: 
+Output Matrix:
+11  12  
+32  35  
+For a cache size 256, matrix size is 2x2, associativity 4.
+Ratio of read to write accesses is 3.000000.
+Hit 20 - count 32
+"Hit rate" for the cache is 62.500%
+--------------------------------------------
+
+Please enter cache size (16 or 256): Size entered: 256
+Please enter cache associativity (1, 2 or 4): Enter rows and column for first matrix: Enter rows and column for second matrix: 
+Output Matrix:
+735  780  825  870  915  960  1005  1050  1095  1140  
+880  935  990  1045  1100  1155  1210  1265  1320  1375  
+1025  1090  1155  1220  1285  1350  1415  1480  1545  1610  
+1170  1245  1320  1395  1470  1545  1620  1695  1770  1845  
+1315  1400  1485  1570  1655  1740  1825  1910  1995  2080  
+1460  1555  1650  1745  1840  1935  2030  2125  2220  2315  
+1605  1710  1815  1920  2025  2130  2235  2340  2445  2550  
+1750  1865  1980  2095  2210  2325  2440  2555  2670  2785  
+1895  2020  2145  2270  2395  2520  2645  2770  2895  3020  
+2040  2175  2310  2445  2580  2715  2850  2985  3120  3255  
+For a cache size 256, matrix size is 10x10, associativity 1.
+Ratio of read to write accesses is 3.000000.
+Hit 2757 - count 4000
+"Hit rate" for the cache is 68.925%
+--------------------------------------------
+
+Please enter cache size (16 or 256): Size entered: 256
+Please enter cache associativity (1, 2 or 4): Enter rows and column for first matrix: Enter rows and column for second matrix: 
+Output Matrix:
+735  780  825  870  915  960  1005  1050  1095  1140  
+880  935  990  1045  1100  1155  1210  1265  1320  1375  
+1025  1090  1155  1220  1285  1350  1415  1480  1545  1610  
+1170  1245  1320  1395  1470  1545  1620  1695  1770  1845  
+1315  1400  1485  1570  1655  1740  1825  1910  1995  2080  
+1460  1555  1650  1745  1840  1935  2030  2125  2220  2315  
+1605  1710  1815  1920  2025  2130  2235  2340  2445  2550  
+1750  1865  1980  2095  2210  2325  2440  2555  2670  2785  
+1895  2020  2145  2270  2395  2520  2645  2770  2895  3020  
+2040  2175  2310  2445  2580  2715  2850  2985  3120  3255  
+For a cache size 256, matrix size is 10x10, associativity 2.
+Ratio of read to write accesses is 3.000000.
+Hit 3483 - count 4000
+"Hit rate" for the cache is 87.075%
+--------------------------------------------
+
+Please enter cache size (16 or 256): Size entered: 256
+Please enter cache associativity (1, 2 or 4): Enter rows and column for first matrix: Enter rows and column for second matrix: 
+Output Matrix:
+735  780  825  870  915  960  1005  1050  1095  1140  
+880  935  990  1045  1100  1155  1210  1265  1320  1375  
+1025  1090  1155  1220  1285  1350  1415  1480  1545  1610  
+1170  1245  1320  1395  1470  1545  1620  1695  1770  1845  
+1315  1400  1485  1570  1655  1740  1825  1910  1995  2080  
+1460  1555  1650  1745  1840  1935  2030  2125  2220  2315  
+1605  1710  1815  1920  2025  2130  2235  2340  2445  2550  
+1750  1865  1980  2095  2210  2325  2440  2555  2670  2785  
+1895  2020  2145  2270  2395  2520  2645  2770  2895  3020  
+2040  2175  2310  2445  2580  2715  2850  2985  3120  3255  
+For a cache size 256, matrix size is 10x10, associativity 4.
+Ratio of read to write accesses is 3.000000.
+Hit 3700 - count 4000
+"Hit rate" for the cache is 92.500%
+--------------------------------------------
+
