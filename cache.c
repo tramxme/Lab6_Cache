@@ -66,38 +66,55 @@ void MoveCache(int row, int column) {
    cache.numArr[row][idx] = temp;
 }
 
-/* This function is to check if a an item was found in the cache */
 int CheckHit(int *mp, int idx) {
    int hit = 0, i;
 
    for (i = 0; i < cache.assoc; i++) {
-      if (mp == cache.flagArr[idx]) {
-         hit = 1;
-         if (cache.size > 1 && cache.flagArr[idx][i + 1]) {
-            MoveCache(idx, mp);
+      if (!cache.flagArr[idx][i]) {
+         if (mp == cache.numArr[idx][i]) {
+            MoveCache(idx, i);
+            return 1;
          }
-         break;
+         return 0;
       }
    }
+   return 0;
+}
 
-   return hit;
+void AccessCache(int *mp) {
+   int row = ((int) mp % cache.size), column = 0;
+   
+   cache.count++;
+   
+   if (CheckHit(mp, index)) { //Indicates a "hit"
+      cache.hit++;
+   }
+   else {                     //Indicates a "miss"
+      while (column < cache.assoc && cache.flagArr[row][column]) {
+         column++;
+      }
+      if (column == cache.assoc) {
+         column--;
+         MoveCache(row, 0);
+      }
+      cache.flagArr[row][column] = 1;
+      cache.numArr[row][column] = mp;
+      
+   }
 }
 
 /* This function is to read from cache */
 void mem_read(int *mp)
 {
-   int index = ((int) mp % cache.size);
+   AccessCache(mp);
    readAccess++;
-   cache.count++;
-   if (CheckHit(mp, index)) {
-      cache.hit++;
-   }
    printf("Memory read from location %p\n", mp);
 }
 
 /* This function is to write to cache */
 void mem_write(int *mp)
 {
+   AccessCache(mp);
    writeAccess++;
    printf("Memory write to location %p\n", mp);
 }
